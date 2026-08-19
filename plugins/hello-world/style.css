@@ -1,0 +1,17 @@
+.hello-world-plugin {
+  padding: 16px;
+}
+
+.hello-world-plugin .plugin-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary, #ff6a00);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hello-world-plugin .plugin-btn:hover {
+  opacity: 0.9;
+}

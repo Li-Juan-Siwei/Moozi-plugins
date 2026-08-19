@@ -1,0 +1,10 @@
+{
+  "name": "中国象棋",
+  "version": "1.0.0",
+  "description": "经典中国象棋，支持完整走子规则。双人轮流对弈。",
+  "author": "Moozi Team",
+  "category": "game",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 0a1 1 0 0 0-1 1v5.268c0 .437.222.848.584 1.082C4.163 8.347 2 10.6 2 13.333V15a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1.667C14 10.6 11.837 8.347 8.416 7.35A1.333 1.333 0 0 0 9 6.268V1a1 1 0 0 0-1-1z\"/></svg>",
+  "dependencies": ["puzzle"],
+  "entry": "index.js"
+}
