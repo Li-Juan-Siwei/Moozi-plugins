@@ -1,37 +1,5 @@
 [
   {
-    "id": "accounting",
-    "name": "账单",
-    "version": "1.0.0",
-    "description": "简易收支记账，支持分类记录和月度统计。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z\"/><path d=\"M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z\"/></svg>",
-    "entry": "index.js",
-    "category": "module",
-    "dependencies": [],
-    "files": {
-      "index.js": "90edc83699d8d27d911492f188789e881110e2d7f12c0484d3a61486c26fee0a",
-      "manifest.json": "3e85da3dfd850d6f125e40200667bbd1fc7095359768e3240075f061bacef602"
-    }
-  },
-  {
-    "id": "chinese-chess",
-    "name": "中国象棋",
-    "version": "1.0.0",
-    "description": "经典中国象棋，支持完整走子规则。双人轮流对弈。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 0a1 1 0 0 0-1 1v5.268c0 .437.222.848.584 1.082C4.163 8.347 2 10.6 2 13.333V15a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1.667C14 10.6 11.837 8.347 8.416 7.35A1.333 1.333 0 0 0 9 6.268V1a1 1 0 0 0-1-1z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "796bd08e595897aa41df11b7ce18dde11bf821180c39b401b4fca6133ef22993",
-      "manifest.json": "1794f034aec900a62a7945e9b45342521c2a5b77f02a3b361c101dbcf369882a"
-    }
-  },
-  {
     "id": "drawing",
     "name": "绘制",
     "version": "1.0.0",
@@ -44,107 +12,6 @@
     "files": {
       "index.js": "988283acb0b4f750fb3edadcb8f0972b4c72edbb83f7b7506896db3344382f0f",
       "manifest.json": "df61e7b4ef6f2527107d0514179eaeb7f99b2744c2c71c569213bebf504eb074"
-    }
-  },
-  {
-    "id": "game2048",
-    "name": "2048",
-    "version": "1.0.0",
-    "description": "经典数字合成游戏，滑动合并相同数字，目标 2048。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 1a1 1 0 0 0-1 1v5.268c0 .437.222.848.584 1.082C4.163 8.347 2 10.6 2 13.333V15a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1.667C14 10.6 11.837 8.347 8.416 7.35A1.333 1.333 0 0 0 9 6.268V2a1 1 0 0 0-1-1z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "5e96c91981ed134217bb0809731bc878a3c3ca7e2f171c6a6b91060be6e9bbcd",
-      "manifest.json": "c8abd261995281370e83b007ee065ec04378d76752084876230f1ade28af0e2b"
-    }
-  },
-  {
-    "id": "game24",
-    "name": "24点",
-    "version": "1.0.0",
-    "description": "数学益智游戏，用加减乘除算出24。系统内置自动求解。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "af6e53720a0c5d5da3c940c30495b9a3a51d22c0369e35372195cdc39055d070",
-      "manifest.json": "deffa654cfd2c7a077f2d27f6f76d6d4f60662b87ef6e2b97f875344ca9bb6f6"
-    }
-  },
-  {
-    "id": "go",
-    "name": "围棋",
-    "version": "1.0.0",
-    "description": "经典19路围棋，支持提子、禁入点、劫争和终局数子。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"8\" cy=\"8\" r=\"3\" fill=\"currentColor\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "ea6a62ad4b150db96f910642d1205d31c8192831eaa9cc4725f5237afc21b773",
-      "manifest.json": "c9bb2794a7ab462e1fd559e0b54e0988c181aa110afaa3bc21b8c0b7431344a5"
-    }
-  },
-  {
-    "id": "hello-world",
-    "name": "Hello World",
-    "version": "1.0.0",
-    "description": "外部插件系统示例，演示如何开发第三方插件",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/><path d=\"M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z\"/></svg>",
-    "entry": "main.js",
-    "category": "module",
-    "dependencies": [],
-    "files": {
-      "main.js": "6296a393685f26e2fe737679caef155c0e716331d025189dfa1666f19c638b05",
-      "manifest.json": "2c45e95e59cb7318aaf330c6aad7b281326ad68c5192bf949904d7218c93d3ea",
-      "style.css": "5ac97de15b7376c16dc1ceb9a428edddce4e1b3e9a34433ea3e530b9fde37ced"
-    }
-  },
-  {
-    "id": "idiom-chain",
-    "name": "成语接龙",
-    "version": "1.0.0",
-    "description": "经典文字益智游戏，内置200+成语。与电脑轮流接龙，考验成语积累。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z\"/><path d=\"M4.5 6.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM4.5 9a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM4.5 11.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "74037f6fe54be878ed343f5f4151c20e35a0549d4ec7e943af13223b2dc1351d",
-      "manifest.json": "44a57232d91ea46b0f72f467b2693c9452f3498045d47cd7fabf329f92df648d"
-    }
-  },
-  {
-    "id": "klotski",
-    "name": "华容道",
-    "version": "1.0.0",
-    "description": "经典数字华容道，4×4 网格滑动数字到正确顺序。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-13zM2 2.5v5h5v-5H2zm6 0v5h5v-5H8zm-6 6v5h5v-5H2zm6 0v5h5v-5H8z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "9b2d435dc5d450703e9a1517a6a5bc07bf1f121d7a43a6ea0a5277bc17dd0f3b",
-      "manifest.json": "a813e96b77566895368bd8d471010510269b667eab83007acd5485f781eb6c72"
     }
   },
   {
@@ -163,55 +30,6 @@
     }
   },
   {
-    "id": "minesweeper",
-    "name": "扫雷",
-    "version": "1.0.0",
-    "description": "经典扫雷游戏，9×9 格子，找出所有隐藏的地雷。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "721309e9b8d4358c03f15581dae5b331c73267a907773e251c98271921f27a2c",
-      "manifest.json": "ad730b10766cad7110f38655d1cabf19ab2ffa7000be8a99a92c72f13fc6c5e8"
-    }
-  },
-  {
-    "id": "nonogram",
-    "name": "数织",
-    "version": "1.0.0",
-    "description": "根据行列数字提示填充格子，绘出隐藏图案。包含心形、音符、猫咪等谜题。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-13zM2 2.5v5h5v-5H2zm6 0v5h5v-5H8zm-6 6v5h5v-5H2zm6 0v5h5v-5H8z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "28c859125d580f62d2e3031d90489dbe8e5235a8c5ce3a0edadaec390b189c45",
-      "manifest.json": "845afb33a6387977c22a58b4402660c687a5ba1052332d12a801977264b67092"
-    }
-  },
-  {
-    "id": "poetry",
-    "name": "文萃",
-    "version": "3.0.0",
-    "description": "文萃：离线文学库。含「诗词」（译文、课本式注释、原文标注、相似诗句、批量导入、AI 赏析）与「成语」子模块，可持续扩展更多子模块。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.88 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z\"/></svg>",
-    "entry": "index.js",
-    "category": "module",
-    "dependencies": [],
-    "files": {
-      "index.js": "5efb141bbd34a629d3109cbdf6b3e4d0647a5452f2016eb7609838d88edebf95",
-      "manifest.json": "3230c55680a7507224ae830aa3ba20b92a6e47e6e68cd548d02ecb380a4619ce"
-    }
-  },
-  {
     "id": "puzzle",
     "name": "益智",
     "version": "1.0.0",
@@ -224,59 +42,6 @@
     "files": {
       "index.js": "5d2b89b408642365cef316d64f3a6beb50691528d604fff95df9ca6e0f065486",
       "manifest.json": "a05c030c36a77de80a27bbdd8269726c8868e16f5492ec259129899eb774b8b5"
-    }
-  },
-  {
-    "id": "puzzle-gomoku",
-    "name": "五子棋",
-    "version": "1.0.0",
-    "description": "益智模块，包含五子棋小游戏",
-    "author": "Moozi",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0\"/><path d=\"M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "Gomoku.vue": "f50348c2e8b2a95d1ba097f9e505f2de286d988d4e2be19617d7d43595dba589",
-      "index.js": "916057e08e36014ab3ac89fe2e498ec45460b16b092a4cf3756bf830a1742de9",
-      "manifest.json": "49896325bca33496d175c1e8ce598aa2ed3a8875a7bc5a48bad7d172164d81db",
-      "Puzzle.vue": "82a46591c2f53c1a7c30cbe4a9d827b44c9d7d9ea5373135adde3d38256876b9"
-    }
-  },
-  {
-    "id": "sokoban",
-    "name": "推箱子",
-    "version": "1.0.0",
-    "description": "经典推箱子谜题，把箱子推到目标点。包含5个关卡。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M2.5 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm9 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM0 7.5A1.5 1.5 0 0 1 1.5 6h13A1.5 1.5 0 0 1 16 7.5v1a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 8.5v-1zM2.5 14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm9 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "259c0c3732c31bdc549c645053e268a833d90078148df1fd50f6e1f9d53889f9",
-      "manifest.json": "5fed03eaa130b6f076fc528bc017ce91eac3a9e67370a2fa19485c97c5231af6"
-    }
-  },
-  {
-    "id": "sudoku",
-    "name": "数独",
-    "version": "1.0.0",
-    "description": "经典数独游戏，9×9 格子，考验逻辑推理能力。",
-    "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-13zM2 2.5v5h5v-5H2zm6 0v5h5v-5H8zm-6 6v5h5v-5H2zm6 0v5h5v-5H8z\"/></svg>",
-    "entry": "index.js",
-    "category": "game",
-    "dependencies": [
-      "puzzle"
-    ],
-    "files": {
-      "index.js": "f1e00011062c8727964d7c930aad4a783e11abb7790d47be13b29f066b003d7c",
-      "manifest.json": "876326d6fda0bb8d7ed252efc6bd04bb99fc681fda94641896d0d5a7363b579c"
     }
   }
 ]
