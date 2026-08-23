@@ -54,7 +54,11 @@ plugins-repo/
 1. 在 `plugins/` 下新建 `<plugin-id>/` 目录，编写 `manifest.json`（含 `entry`、`category`）和入口 JS，可选 `style.css`。插件开发规范见主项目 `PLUGIN_DEVELOPMENT.md`。
 2. 运行 `node build-manifest.js` 重新生成 `plugins.json`（会自动带上最新文件的 SHA-256）。
 3. 更新已有插件时记得提升 `manifest.json` 中的 `version`，应用端靠版本号差异提示更新。
-4. 推送到 GitHub 后，jsDelivr 可能需要数分钟刷新缓存；如需立即生效，可临时用 `@<commit-sha>` 代替 `@main` 验证。
+4. 推送到 GitHub 后，jsDelivr 对 `@main` 分支的缓存可能滞留数小时（应用优先从 jsDelivr 拉取，缓存未刷新时市场看不到新插件）。推送后应立即手动 purge：
+   ```
+   curl "https://purge.jsdelivr.net/gh/Li-Juan-Siwei/Moozi-plugins@main/plugins.json"
+   ```
+   新增插件的文件路径是全新 URL，无缓存问题；只有 `plugins.json` 需要 purge。如需验证，可临时用 `@<commit-sha>` 代替 `@main`。
 
 ## 安全说明
 
