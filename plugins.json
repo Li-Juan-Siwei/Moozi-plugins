@@ -33,7 +33,7 @@
   {
     "id": "flashcards",
     "name": "闪卡",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "间隔重复记忆卡片（SM-2 算法），支持牌组管理、批量导入、每日新卡限额与复习统计。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z\"/><path d=\"M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z\"/></svg>",
@@ -41,9 +41,9 @@
     "category": "module",
     "dependencies": [],
     "files": {
-      "main.js": "8c8011aad9239c52f68dc6915f90b5c229ba518275075a72857755eeee5017e2",
-      "manifest.json": "2455dc9b8bdcc2112cb6a5aa0aaa23ac149022e275daa67c6cef80258c80a994",
-      "style.css": "108146a793223334b6ace67ca5c19d141fd552573c80cd2c060de91f3c3e1585"
+      "main.js": "7c12d2c5fb736c173280af310b4f84be42855391410fc80ba37eb6de9eca07bc",
+      "manifest.json": "e6e0cfe17883730dc6c51fe9943a98454ffdaab88b6f89086191dd249388ff90",
+      "style.css": "44d537957c2102e32333868a682ddaa4c31a9182c685016a5a395fd29e491e01"
     }
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": "on-this-day",
     "name": "那年今日",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "回顾往年在今天写下的随记与日记，支持随机回顾，让沉淀的内容重新被看见。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z\"/><path d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z\"/></svg>",
@@ -88,9 +88,9 @@
     "category": "module",
     "dependencies": [],
     "files": {
-      "main.js": "9394024b8ec2a3afa8918899eb09db4935fec3ca056e1d1f8d2be6a1f9aca55b",
-      "manifest.json": "b4c427f6c30a8fb30b02d369399f709ad54dcac531ffd759eb2c0a1f8a05205b",
-      "style.css": "d935afd5dfb3845a2cd3c5eb38ae05a06460870bb645ee5740ca4914b4a5d642"
+      "main.js": "07ba98cb105f37d2aacb9d1f864c5a689422ca39ca964f36cde030edda71af26",
+      "manifest.json": "fc54b8628f63a377ae095d03503f1f5e7a16f886bcd4f8d9e3a8d18b85d0d49f",
+      "style.css": "ff4fceb1c73577e91fd06c6e1be8774d6f54f528f1a8bb7aa3ac1f247e5374f1"
     }
   },
   {
@@ -111,7 +111,7 @@
   {
     "id": "pomodoro",
     "name": "番茄钟",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "番茄工作法计时器，支持自定义时长、完成声音提醒与近 7 日专注统计。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5V5.6z\"/><path d=\"M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.728a.5.5 0 0 1-.5-.5V1z\"/></svg>",
@@ -119,9 +119,9 @@
     "category": "module",
     "dependencies": [],
     "files": {
-      "main.js": "c76ce1f8499d2912d1e5aa88c603016ea5f19a661ebf137e8cb9ab1e872651ba",
-      "manifest.json": "6501bed632877d2cdf3cea923f7c6be2bbe00e0b45d20d5e59d4de0131da3dd5",
-      "style.css": "89f27bd8c972c1c26b8d3d65b30e1f5df71324b0d468eec1edf75f97326e1c85"
+      "main.js": "3bd8aa59acf28a1b28d3a88ffc8c281dfaf660bb1c31c3c94488a15be3261052",
+      "manifest.json": "dab97370fe440f8cf08c2af99aa02b5a0f8dbbb46631b26302f5a307c4e2dc32",
+      "style.css": "b420e4c3c36c846f092c5a225822ed80d10a250943eb9949f6a86726fcc39130"
     }
   },
   {

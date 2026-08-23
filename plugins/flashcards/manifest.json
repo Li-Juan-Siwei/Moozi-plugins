@@ -1,6 +1,6 @@
 {
   "name": "闪卡",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "间隔重复记忆卡片（SM-2 算法），支持牌组管理、批量导入、每日新卡限额与复习统计。安装后可在模块自定义显示中启用。",
   "author": "Moozi Team",
   "category": "module",

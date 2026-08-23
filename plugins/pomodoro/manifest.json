@@ -1,6 +1,6 @@
 {
   "name": "番茄钟",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "番茄工作法计时器，支持自定义时长、完成声音提醒与近 7 日专注统计。安装后可在模块自定义显示中启用。",
   "author": "Moozi Team",
   "category": "module",
