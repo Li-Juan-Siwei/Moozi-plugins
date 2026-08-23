@@ -17,7 +17,7 @@
   {
     "id": "epub-reader",
     "name": "阅读",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "EPUB 电子书阅读器，支持目录导航、字号与主题调节、阅读进度记忆。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z\"/><path d=\"M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z\"/><path d=\"M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z\"/></svg>",
@@ -25,9 +25,9 @@
     "category": "module",
     "dependencies": [],
     "files": {
-      "main.js": "42269a1cfbec41fb9cd53e2f516ff8be8236a7d67d24724f6ed1e962236adca5",
-      "manifest.json": "3126e7565624f522168a3ebd70658ab3c0cdfc9853fdb21d53b12d0a077034fa",
-      "style.css": "1b7657c655f77511ca5acbd24ca2430d0170e8498ca07ca2e00370e1d9e0705c"
+      "main.js": "3592046dd1057ba42250beb7a7704cd1839d0963740d42c45a69036759693f76",
+      "manifest.json": "17651ce1b6b59a87fab217b22fc2552ad564b921ab8ef3d79ed55b6f8d53da01",
+      "style.css": "63f86c0372b7adaa6b3bb36f3af502a0d4ba88c1a3d548d26e8c4dd5b5c25bb6"
     }
   },
   {
@@ -48,7 +48,7 @@
   {
     "id": "office-viewer",
     "name": "办公",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "办公文档查看器，支持预览 Word（docx）、Excel（xlsx/xls）、PowerPoint（pptx）文件。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z\"/><path d=\"M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z\"/></svg>",
@@ -56,9 +56,9 @@
     "category": "module",
     "dependencies": [],
     "files": {
-      "main.js": "94dccb9ec633c966eeab4d33bff971e84e9e7c8f500b839dc808dbae5c59a975",
-      "manifest.json": "f5bc0adead8325e359256be99d0f7a362153a52da762d4630a75950560b4fd66",
-      "style.css": "d8b393bce2e9b73d1b23918b92b8982da477d7798cd7f7eeede8866a74c15331"
+      "main.js": "431ffdd3dead61e9247adec195511a62db0dfac37a29c958f74f04c94a7cadf3",
+      "manifest.json": "61f20452f31164c533c115bba1866108c98b6ce271ea93602b0bd1a0605bae79",
+      "style.css": "5a60055ab33956b087a5a733ccb1762e7a137c43126dde20010edfef24da9cb4"
     }
   },
   {

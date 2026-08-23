@@ -1,6 +1,6 @@
 {
   "name": "办公",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "办公文档查看器，支持预览 Word（docx）、Excel（xlsx/xls）、PowerPoint（pptx）文件。安装后可在模块自定义显示中启用。",
   "author": "Moozi Team",
   "category": "module",
