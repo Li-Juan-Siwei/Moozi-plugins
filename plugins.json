@@ -2,141 +2,154 @@
   {
     "id": "drawing",
     "name": "绘制",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "绘制模块，提供画图板功能，安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z\"/></svg>",
     "entry": "index.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "index.js": "988283acb0b4f750fb3edadcb8f0972b4c72edbb83f7b7506896db3344382f0f",
-      "manifest.json": "df61e7b4ef6f2527107d0514179eaeb7f99b2744c2c71c569213bebf504eb074"
+      "manifest.json": "dd0699e443b61bc04829bc2ddb8d7e47121fd0dc7df8340db8543903bb726642"
     }
   },
   {
     "id": "epub-reader",
     "name": "阅读",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "EPUB 电子书阅读器，支持目录导航、字号与主题调节、阅读进度记忆。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z\"/><path d=\"M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z\"/><path d=\"M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [
+      "openExternal"
+    ],
     "files": {
       "main.js": "3592046dd1057ba42250beb7a7704cd1839d0963740d42c45a69036759693f76",
-      "manifest.json": "17651ce1b6b59a87fab217b22fc2552ad564b921ab8ef3d79ed55b6f8d53da01",
+      "manifest.json": "69415dd2fa71703d75849a9dce03ef9fb0a352573cc3773aa57597da8c939071",
       "style.css": "63f86c0372b7adaa6b3bb36f3af502a0d4ba88c1a3d548d26e8c4dd5b5c25bb6"
     }
   },
   {
     "id": "flashcards",
     "name": "闪卡",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "间隔重复记忆卡片（SM-2 算法），支持牌组管理、批量导入、每日新卡限额与复习统计。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z\"/><path d=\"M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "main.js": "7c12d2c5fb736c173280af310b4f84be42855391410fc80ba37eb6de9eca07bc",
-      "manifest.json": "e6e0cfe17883730dc6c51fe9943a98454ffdaab88b6f89086191dd249388ff90",
+      "manifest.json": "b1288fc4f983d3536da57cb0008cd887eafe448c0154a153e1bd7fa4dcc09d0f",
       "style.css": "44d537957c2102e32333868a682ddaa4c31a9182c685016a5a395fd29e491e01"
     }
   },
   {
     "id": "map",
     "name": "地图",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "扫描照片 EXIF GPS 信息，在地图上聚类展示拍摄位置，支持日期筛选与照片预览。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10\"/><path d=\"M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6\"/></svg>",
     "entry": "index.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "index.js": "39a5fa696b7377454b04bef3456d48171193d0bbc0001ebb2b01d69abf01581c",
-      "manifest.json": "74749995a3129c9a59bee71215c89b4f946d7f5e12346041d426b5c2feb04d71"
+      "manifest.json": "8d6705a3a7911ac8db83bbb578ae33ebb04525ed03c4185da7721bc5535d7628"
     }
   },
   {
     "id": "office-viewer",
     "name": "办公",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "办公文档查看器，支持预览 Word（docx）、Excel（xlsx/xls）、PowerPoint（pptx）文件。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z\"/><path d=\"M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "main.js": "431ffdd3dead61e9247adec195511a62db0dfac37a29c958f74f04c94a7cadf3",
-      "manifest.json": "61f20452f31164c533c115bba1866108c98b6ce271ea93602b0bd1a0605bae79",
+      "manifest.json": "a81b6442ae6f857824ac794f9579d7d0e7d95eecad6ba4771b88fa33ba309ec2",
       "style.css": "5a60055ab33956b087a5a733ccb1762e7a137c43126dde20010edfef24da9cb4"
     }
   },
   {
     "id": "on-this-day",
     "name": "那年今日",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "回顾往年在今天写下的随记与日记，支持随机回顾，让沉淀的内容重新被看见。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z\"/><path d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [
+      "cards:read"
+    ],
     "files": {
       "main.js": "07ba98cb105f37d2aacb9d1f864c5a689422ca39ca964f36cde030edda71af26",
-      "manifest.json": "fc54b8628f63a377ae095d03503f1f5e7a16f886bcd4f8d9e3a8d18b85d0d49f",
+      "manifest.json": "5cda2abe9a0fd09e76065d3c0d45f2981fff4b18b3ebee23a6fd0b58fef987ad",
       "style.css": "ff4fceb1c73577e91fd06c6e1be8774d6f54f528f1a8bb7aa3ac1f247e5374f1"
     }
   },
   {
     "id": "poetry",
     "name": "文萃",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "文萃模块，提供诗词与成语查询、收藏功能，支持 AI 解读。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.88 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z\"/></svg>",
     "entry": "index.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "index.js": "5efb141bbd34a629d3109cbdf6b3e4d0647a5452f2016eb7609838d88edebf95",
-      "manifest.json": "09dbdf997682406ae14399d8005715caa3da99dc61cb2c9e87c0b78d433e7c7d"
+      "manifest.json": "d9693a71da76bf960a8856e6357b1cc661401313e69761f36d78d0e950e2b218"
     }
   },
   {
     "id": "pomodoro",
     "name": "番茄钟",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "番茄工作法计时器，支持自定义时长、完成声音提醒与近 7 日专注统计。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5V5.6z\"/><path d=\"M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.728a.5.5 0 0 1-.5-.5V1z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "main.js": "9096b24a8faba74febce2b441f17963dd29caf8e6ce01f795385e4119e8a022a",
-      "manifest.json": "91a348221813e751bd906ef8ccecd46d8fb05689db817b9e92bb8804977a4666",
+      "manifest.json": "e06926de6e2a9f8a64bd0eccdb2fdfec8ccb790f7e2c1f9da356efbc52ada599",
       "style.css": "e57ab3f6f368564008c9e9a0d9344d42aaca7f4ffa43f770f5a637e7f0cf514b"
     }
   },
   {
     "id": "puzzle",
     "name": "益智",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "益智游戏模块，内置五子棋、数独、扫雷、推箱子、数织、华容道、围棋、中国象棋、成语接龙、2048、24点等全部游戏，安装即可畅玩，无需单独安装。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z\"/></svg>",
     "entry": "index.js",
     "category": "module",
     "dependencies": [],
+    "permissions": [],
     "files": {
       "index.js": "5d2b89b408642365cef316d64f3a6beb50691528d604fff95df9ca6e0f065486",
-      "manifest.json": "a05c030c36a77de80a27bbdd8269726c8868e16f5492ec259129899eb774b8b5"
+      "manifest.json": "524e0ec3c7a4f1388853e009a66ff49372b57b36905081c62fa1405c551d2680"
     }
   }
 ]

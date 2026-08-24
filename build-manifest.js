@@ -45,6 +45,7 @@ for (const entry of fs.readdirSync(pluginsDir, { withFileTypes: true })) {
         entry: manifest.entry || 'main.js',
         category: manifest.category || 'module',
         dependencies: manifest.dependencies || [],
+        permissions: Array.isArray(manifest.permissions) ? manifest.permissions : [],
         files
     })
 }
