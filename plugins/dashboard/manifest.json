@@ -1,6 +1,6 @@
 {
   "name": "仪表盘",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "仪表盘主页：天气、写作热力图、待办清单、倒数日与写作统计，一屏总览你的笔记生活。安装后可在模块自定义显示中启用。",
   "author": "Moozi Team",
   "category": "module",
