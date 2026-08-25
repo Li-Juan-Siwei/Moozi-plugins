@@ -2,8 +2,8 @@
   {
     "id": "dashboard",
     "name": "仪表盘",
-    "version": "1.1.0",
-    "description": "仪表盘主页：天气、写作热力图、待办清单、倒数日与写作统计，一屏总览你的笔记生活。安装后可在模块自定义显示中启用。",
+    "version": "1.2.0",
+    "description": "仪表盘主页：天气、每日一言、写作热力图、待办清单、倒数日、写作统计与历史上的今天，一屏总览你的笔记生活。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z\"/></svg>",
     "entry": "main.js",
@@ -15,9 +15,9 @@
       "network"
     ],
     "files": {
-      "main.js": "e0fbea153dbe43305c26fc1854614f5efe15c827d448d309e363bac2585a200e",
-      "manifest.json": "27a9769cb94c8d88d592257b089cd1c0ad0e42715be480da6eccc90dfca9269c",
-      "style.css": "2ba57dda12fca02b07854a5a66d07535eca6020904705d29e5fd75cc51739575"
+      "main.js": "f732ed8dc30d651b46f4f0ca27c9bb8a9ed0d2afe4581f77a542a7ccf91d4161",
+      "manifest.json": "3fa0683e2aadde0923d5ba37dd2bfa3dfc9221f2d11bd4b62761ad33bcd58368",
+      "style.css": "898ba781bc5e3e7450a70eaf68809d1bc2dfaa780261c9d7f246fd982583aa70"
     }
   },
   {
