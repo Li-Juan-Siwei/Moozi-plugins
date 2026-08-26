@@ -1,23 +1,27 @@
 [
   {
     "id": "dashboard",
-    "name": "仪表盘",
-    "version": "1.3.0",
+    "name": "主页",
+    "version": "1.5.0",
     "description": "仪表盘主页：天气、每日一言、写作热力图、待办清单、倒数日、写作统计与历史上的今天，一屏总览你的笔记生活。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
-    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z\"/></svg>",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z\"/></svg>",
     "entry": "main.js",
     "category": "module",
     "dependencies": [],
     "permissions": [
       "cards:read",
+      "cards:write",
+      "memoria",
+      "tags",
+      "files:read",
       "events",
       "network"
     ],
     "files": {
-      "main.js": "aab74fb20e2aefee33d26c167c1f66f53d99922e3b515ba955bf34bf82ff8743",
-      "manifest.json": "c5d3e232da860dd34f8fa416fe5732871e92a502eda5e97824069b542e32951d",
-      "style.css": "cde959f9ea6ea9356976aca0c80d908dc0f6ab5c2116389a1d009aecf2782e75"
+      "main.js": "c6c6e03285ab5d401ccec7649378ac510328662ec2703575daf7c54229213f9e",
+      "manifest.json": "3f29cd30e83711860b053a4ebb758f0c29bf031031ff636efb52d746b0980a35",
+      "style.css": "d49f903d6b92b9f9202b1ea71b6e3a63d469d3a4a770e0f9195498a627fdbf58"
     }
   },
   {
