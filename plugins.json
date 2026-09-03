@@ -43,8 +43,8 @@
   {
     "id": "epub-reader",
     "name": "阅读",
-    "version": "1.0.3",
-    "description": "EPUB 电子书阅读器，支持目录导航、字号与主题调节、阅读进度记忆。作为隐藏模块运行：仓库中的 EPUB 卡片点击即可阅读。",
+    "version": "1.1.0",
+    "description": "EPUB 电子书阅读器，支持目录导航、字号与主题调节、阅读进度记忆、划选高亮与批注（UI 对齐 PDF 标注）。作为隐藏模块运行：仓库中的 EPUB 卡片点击即可阅读。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z\"/><path d=\"M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z\"/><path d=\"M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z\"/></svg>",
     "entry": "main.js",
@@ -54,9 +54,9 @@
       "openExternal"
     ],
     "files": {
-      "main.js": "2a216bb521e07504c11a457415507aefb5e338159aca97183f6b42d7c4282a94",
-      "manifest.json": "0d57dbe22e6991a35e97b366ad27c76d439dd81355827a84f96530f7d132a29c",
-      "style.css": "fb0b5d9520067dd7eb794cc1434f8da6aba3631f02dc82ffb58a79f7f2d99e45"
+      "main.js": "71ea12c41623c6e91aa7783a4db7f3cb0b74e5db14451d3867664d0b6ccb66c9",
+      "manifest.json": "b3097d7125602a7853a76e375e7137f4206ffb07095dedd69da7367921d13d1d",
+      "style.css": "71947a3e1ed4e1cecc90a72f2bf4f700bfb65568f170c6cd202f436242044fb4"
     }
   },
   {
