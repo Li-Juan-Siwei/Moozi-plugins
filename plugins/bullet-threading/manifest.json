@@ -1,0 +1,11 @@
+{
+  "name": "列表穿线",
+  "version": "1.0.0",
+  "description": "为编辑器嵌套列表绘制树状穿线：从父项标记向下延伸竖线并以圆角弯头连接到每个子项，支持全部四种列表类型，颜色粗细跟随缩进参考线设置。作为后台增强模块运行，安装启用后自动生效。",
+  "author": "Moozi Team",
+  "category": "module",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"><path d=\"M3.5 1.5v13\"/><path d=\"M3.5 4.5q0 2.5 2.5 2.5H9\"/><path d=\"M3.5 9q0 2.5 2.5 2.5H9\"/><circle cx=\"10.5\" cy=\"7\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10.5\" cy=\"11.5\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+  "entry": "main.js",
+  "location": "background",
+  "permissions": []
+}

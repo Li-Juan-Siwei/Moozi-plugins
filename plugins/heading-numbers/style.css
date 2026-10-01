@@ -1,0 +1,192 @@
+/* ===== 标题序号 =====
+ * 原理：CSS 计数器在编辑器标题前叠加序号（::before），不写入文档正文。
+ * 设置由 main.js 写到 <html> 的属性决定：
+ *   data-hn-style="decimal" | "chinese" | "flat"   编号风格
+ *   data-hn-start="1".."4"                          起始层级（之前的层级不编号、不占位）
+ *   data-hn-skip-h1                                 跳过首个一级标题的编号（仍占用序号）
+ */
+
+/* 每个文档（ProseMirror 实例）独立一套计数器，从 1 开始 */
+.editor-content .ProseMirror {
+  counter-reset: hn1 hn2 hn3 hn4 hn5 hn6;
+}
+
+/* 层级递增与下级重置（三种风格共用；起始层级之前的层级由下方规则关闭） */
+.editor-content .ProseMirror h1 { counter-increment: hn1; counter-reset: hn2 hn3 hn4 hn5 hn6; }
+.editor-content .ProseMirror h2 { counter-increment: hn2; counter-reset: hn3 hn4 hn5 hn6; }
+.editor-content .ProseMirror h3 { counter-increment: hn3; counter-reset: hn4 hn5 hn6; }
+.editor-content .ProseMirror h4 { counter-increment: hn4; counter-reset: hn5 hn6; }
+.editor-content .ProseMirror h5 { counter-increment: hn5; counter-reset: hn6; }
+.editor-content .ProseMirror h6 { counter-increment: hn6; }
+
+/* 连续平铺风格的独立计数器 */
+html[data-hn-style="flat"] .editor-content .ProseMirror { counter-reset: hn-flat; }
+html[data-hn-style="flat"] .editor-content .ProseMirror :is(h1, h2, h3, h4, h5, h6) { counter-increment: hn-flat; }
+
+/* 序号统一排版：颜色跟随次级文字，字号字重跟随标题 */
+.editor-content .ProseMirror :is(h1, h2, h3, h4, h5, h6)::before {
+  color: var(--text-secondary, #999);
+  font-weight: inherit;
+}
+
+/* ---- 编号规则（风格 × 起始层级，由脚本生成） ---- */
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h1::before { content: counter(hn1) ". "; }
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h2::before { content: counter(hn1) "." counter(hn2) " "; }
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h3::before { content: counter(hn1) "." counter(hn2) "." counter(hn3) " "; }
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h4::before { content: counter(hn1) "." counter(hn2) "." counter(hn3) "." counter(hn4) " "; }
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h5::before { content: counter(hn1) "." counter(hn2) "." counter(hn3) "." counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="decimal"][data-hn-start="1"] .editor-content .ProseMirror h6::before { content: counter(hn1) "." counter(hn2) "." counter(hn3) "." counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h1::before { content: counter(hn1, cjk-ideographic) "、"; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h2::before { content: "（" counter(hn2, cjk-ideographic) "）"; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h3::before { content: counter(hn3) ". "; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h4::before { content: counter(hn3) "." counter(hn4) " "; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h5::before { content: counter(hn3) "." counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="chinese"][data-hn-start="1"] .editor-content .ProseMirror h6::before { content: counter(hn3) "." counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="flat"][data-hn-start="1"] .editor-content .ProseMirror :is(h1, h2, h3, h4, h5, h6)::before { content: counter(hn-flat) ". "; }
+html[data-hn-style="decimal"][data-hn-start="2"] .editor-content .ProseMirror h2::before { content: counter(hn2) ". "; }
+html[data-hn-style="decimal"][data-hn-start="2"] .editor-content .ProseMirror h3::before { content: counter(hn2) "." counter(hn3) " "; }
+html[data-hn-style="decimal"][data-hn-start="2"] .editor-content .ProseMirror h4::before { content: counter(hn2) "." counter(hn3) "." counter(hn4) " "; }
+html[data-hn-style="decimal"][data-hn-start="2"] .editor-content .ProseMirror h5::before { content: counter(hn2) "." counter(hn3) "." counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="decimal"][data-hn-start="2"] .editor-content .ProseMirror h6::before { content: counter(hn2) "." counter(hn3) "." counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="chinese"][data-hn-start="2"] .editor-content .ProseMirror h2::before { content: counter(hn2, cjk-ideographic) "、"; }
+html[data-hn-style="chinese"][data-hn-start="2"] .editor-content .ProseMirror h3::before { content: "（" counter(hn3, cjk-ideographic) "）"; }
+html[data-hn-style="chinese"][data-hn-start="2"] .editor-content .ProseMirror h4::before { content: counter(hn4) ". "; }
+html[data-hn-style="chinese"][data-hn-start="2"] .editor-content .ProseMirror h5::before { content: counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="chinese"][data-hn-start="2"] .editor-content .ProseMirror h6::before { content: counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="flat"][data-hn-start="2"] .editor-content .ProseMirror :is(h2, h3, h4, h5, h6)::before { content: counter(hn-flat) ". "; }
+html[data-hn-style="decimal"][data-hn-start="3"] .editor-content .ProseMirror h3::before { content: counter(hn3) ". "; }
+html[data-hn-style="decimal"][data-hn-start="3"] .editor-content .ProseMirror h4::before { content: counter(hn3) "." counter(hn4) " "; }
+html[data-hn-style="decimal"][data-hn-start="3"] .editor-content .ProseMirror h5::before { content: counter(hn3) "." counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="decimal"][data-hn-start="3"] .editor-content .ProseMirror h6::before { content: counter(hn3) "." counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="chinese"][data-hn-start="3"] .editor-content .ProseMirror h3::before { content: counter(hn3, cjk-ideographic) "、"; }
+html[data-hn-style="chinese"][data-hn-start="3"] .editor-content .ProseMirror h4::before { content: "（" counter(hn4, cjk-ideographic) "）"; }
+html[data-hn-style="chinese"][data-hn-start="3"] .editor-content .ProseMirror h5::before { content: counter(hn5) ". "; }
+html[data-hn-style="chinese"][data-hn-start="3"] .editor-content .ProseMirror h6::before { content: counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="flat"][data-hn-start="3"] .editor-content .ProseMirror :is(h3, h4, h5, h6)::before { content: counter(hn-flat) ". "; }
+html[data-hn-style="decimal"][data-hn-start="4"] .editor-content .ProseMirror h4::before { content: counter(hn4) ". "; }
+html[data-hn-style="decimal"][data-hn-start="4"] .editor-content .ProseMirror h5::before { content: counter(hn4) "." counter(hn5) " "; }
+html[data-hn-style="decimal"][data-hn-start="4"] .editor-content .ProseMirror h6::before { content: counter(hn4) "." counter(hn5) "." counter(hn6) " "; }
+html[data-hn-style="chinese"][data-hn-start="4"] .editor-content .ProseMirror h4::before { content: counter(hn4, cjk-ideographic) "、"; }
+html[data-hn-style="chinese"][data-hn-start="4"] .editor-content .ProseMirror h5::before { content: "（" counter(hn5, cjk-ideographic) "）"; }
+html[data-hn-style="chinese"][data-hn-start="4"] .editor-content .ProseMirror h6::before { content: counter(hn6) ". "; }
+html[data-hn-style="flat"][data-hn-start="4"] .editor-content .ProseMirror :is(h4, h5, h6)::before { content: counter(hn-flat) ". "; }
+
+/* 起始层级之前的标题：不编号、不递增、不重置下级（所有风格共用） */
+html[data-hn-start="2"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="2"] .editor-content .ProseMirror h1::before { content: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h1::before { content: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h2 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h2::before { content: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h1::before { content: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h2 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h2::before { content: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h3 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h3::before { content: none; }
+
+/* ---- 首个一级标题不编号（仍占用序号，后续标题编号不受影响） ----
+ * :not() 保留空标题的输入占位提示（应用内建规则优先级更高，双保险）
+ */
+html[data-hn-skip-h1] .editor-content .ProseMirror > h1:first-of-type:not(.title-placeholder-node):not(.slash-placeholder-node)::before {
+  content: none;
+}
+
+/* ===== 设置面板 ===== */
+
+.hn-settings-group {
+  margin-bottom: 16px;
+}
+
+.hn-settings-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 8px;
+}
+
+.hn-settings-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.hn-settings-radio:has(input:checked) {
+  border-color: var(--primary-color, #4a7dff);
+  background: var(--bg-secondary, rgba(0, 0, 0, 0.04));
+}
+
+.hn-settings-radio input {
+  margin-top: 3px;
+  accent-color: var(--primary-color, #4a7dff);
+}
+
+.hn-settings-radio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hn-settings-radio-name {
+  font-size: 13px;
+  color: var(--text-primary, #333);
+}
+
+.hn-settings-radio-sample {
+  font-size: 12px;
+  color: var(--text-secondary, #999);
+}
+
+.hn-settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-primary, #333);
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.hn-settings-checkbox input {
+  accent-color: var(--primary-color, #4a7dff);
+}
+
+.hn-settings-hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-secondary, #999);
+}
+
+/* 起始层级：横向小胶囊组，紧凑排列 */
+.hn-settings-start-group {
+  display: flex;
+  gap: 6px;
+}
+
+.hn-settings-start-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-primary, #333);
+  cursor: pointer;
+}
+
+.hn-settings-start-item:has(input:checked) {
+  border-color: var(--primary-color, #4a7dff);
+  background: var(--bg-secondary, rgba(0, 0, 0, 0.04));
+}
+
+.hn-settings-start-item input {
+  display: none;
+}

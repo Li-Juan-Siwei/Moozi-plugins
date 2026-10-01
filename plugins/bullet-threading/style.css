@@ -1,0 +1,218 @@
+/* ===== 列表穿线（Bullet Threading） =====
+ * 为编辑器嵌套列表绘制树状连接线：
+ *   1. 复用内置 .indent-line 作为每层的竖向轨道（颜色/粗细/线型全部跟随
+ *      「设置 → 编辑器 → 缩进参考线」注入的 --indent-guide-* 变量）；
+ *   2. 在每个嵌套列表项的 gutter 上用 ::before 补画圆角弯头（└ 形），
+ *      从父级轨道水平连到本项标记（圆点/序号/复选框/三角）中心；
+ *   3. 隐藏无子级列表项的短截线（:not(.has-children)），让线只服务于"连接"。
+ *
+ * 几何依据（editor.css，勿随意改动，改动需同步本文件）：
+ *   - gutter 宽 24px，标记水平居中 → 标记中心 = gutter 左缘 + 12px；
+ *   - 子项缩进 margin-left: calc(var(--list-indent, 28px) - 28px)，
+ *     即子项左缘距父项左缘恰为 var(--list-indent)；
+ *   - 父级轨道在父 gutter 内居中（宽 0 + border-left），相对子 gutter 左缘的
+ *     横坐标 = 12px - var(--list-indent)。
+ *   - 因此弯头只匹配直接嵌套（.flat-list-item > .flat-list-content > .flat-list-item）；
+ *     跨引用块/提示块/多栏的间接嵌套偏移不同，不画弯头（该层仅剩轨道，干净降级）。
+ *
+ * 开关由 main.js 写到 <html> 的 data-bt-mode 属性：always | hover。
+ * 属性缺失（脚本未运行）时本文件全部规则不生效，等于插件关闭。
+ */
+
+/* ---------- 弯头基础几何（所有直接嵌套项共用，深度 ≥2） ---------- */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  /* 左缘与父级轨道重合：轨道中心 = 12px - I，轨道宽 --btw → 左缘 = 中心 - 宽/2 */
+  left: calc(12px - var(--list-indent, 28px) - var(--btw, 1px) / 2);
+  top: 0;
+  /* 右缘抵到本 gutter 中心（标记中心 x=12px）：宽 = I + 轨道宽/2（border-box 含左边框） */
+  width: calc(var(--list-indent, 28px) + var(--btw, 1px) / 2);
+  /* 下边框纵坐标 = 标记中心 + 线宽/2（线中心对准标记中心） */
+  height: calc(var(--bt-my, 0.9em) + var(--btw, 1px) / 2);
+  border-left: var(--btw, 1px) var(--indent-guide-style, solid)
+    var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)));
+  border-bottom: var(--btw, 1px) var(--indent-guide-style, solid)
+    var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)));
+  border-bottom-left-radius: 7px;
+}
+
+/* ---------- 各类型标记的垂直中心微调（gutter 顶 = 0；基准 0.9em = 1.8em 标记的一半） ---------- */
+/* 无序：marker position:relative; top:2px */
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item.bullet-item > .list-gutter::before {
+  --bt-my: calc(0.9em + 2px);
+}
+/* 有序：marker padding-top 5px 且字号 0.9em，序号视觉中心略低 */
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item.ordered-item > .list-gutter::before {
+  --bt-my: calc(0.9em + 4px);
+}
+/* 任务：custom-checkbox top:4px；且复选框（16px 居中、未勾选时内部透明）不能被线穿过，
+   水平段止于复选框左缘（gutter 中心左移 8px），而非穿过框体 */
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item.task-item > .list-gutter::before {
+  --bt-my: calc(0.9em + 4px);
+  width: calc(var(--list-indent, 28px) + var(--btw, 1px) / 2 - 8px);
+}
+/* 三角：marker flex 居中，无偏移，用基准值即可 */
+
+/* ---------- 弯头颜色/粗细跟随父级轨道的层级变量 ----------
+ * 弯头属于父级线的一部分：深度 d 的子项用第 d-1 层的变量，
+ * 回退链与 editor.css 的 indent-line 层级规则保持一致（未设置向前回退）。
+ * 全部链 specificity 相同（重复段包在 :where 里），靠书写顺序深覆盖浅。 */
+/* 深度 2 → 第 1 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-1, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-1,
+    var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)))
+  );
+}
+/* 深度 3 → 第 2 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-2, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-2,
+    var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5))))
+  );
+}
+/* 深度 4 → 第 3 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-3, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-3,
+    var(--indent-guide-color-2, var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)))))
+  );
+}
+/* 深度 5 → 第 4 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-4, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-4,
+    var(--indent-guide-color-3, var(--indent-guide-color-2, var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5))))))
+  );
+}
+/* 深度 6 → 第 5 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-5, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-5,
+    var(--indent-guide-color-4, var(--indent-guide-color-3, var(--indent-guide-color-2, var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)))))))
+  );
+}
+/* 深度 7 → 第 6 层 */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-6, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-6,
+    var(--indent-guide-color-5, var(--indent-guide-color-4, var(--indent-guide-color-3, var(--indent-guide-color-2, var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5))))))))
+  );
+}
+/* 深度 8 及以下 → 第 7 层（与 editor.css 相同，更深层级沿用第 7 层回退链） */
+html[data-bt-mode] .editor-content .ProseMirror :where(.flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item > .flat-list-content > .flat-list-item) > .list-gutter::before {
+  --btw: var(--indent-guide-width-7, var(--indent-guide-width, 1px));
+  border-color: var(
+    --indent-guide-color-7,
+    var(--indent-guide-color-6, var(--indent-guide-color-5, var(--indent-guide-color-4, var(--indent-guide-color-3, var(--indent-guide-color-2, var(--indent-guide-color-1, var(--indent-guide-color, var(--border-color, rgba(200, 200, 200, 0.5)))))))))
+  );
+}
+
+/* ---------- 隐藏无子级项的短截线：穿线模式下竖线只用于连接父项与子项 ---------- */
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item:not(.has-children) > .list-gutter > .indent-line {
+  display: none;
+}
+/* 穿线依赖轨道线：用户在设置里"隐藏缩进参考线"时仍保留有子级项的轨道，否则穿线残缺 */
+html[data-bt-mode] .hide-indent-guides .editor-content .ProseMirror .flat-list-item.has-children > .list-gutter > .indent-line {
+  display: block;
+}
+
+/* ---------- 浮动块（float-block）里 gutter 被隐藏/浮动化，几何不成立，禁用弯头 ---------- */
+html[data-bt-mode] .editor-content .ProseMirror .float-block-node .flat-list-item > .list-gutter::before {
+  content: none;
+}
+
+/* ---------- 悬停联动：轨道线悬停变红时，其直下子项的弯头同步变红 ----------
+ * （重复 5 次 .flat-list-item 是为了让优先级压过 editor.css 最深的 7 层颜色链，
+ *   使悬停高亮在任意深度都生效；插件 CSS 加载晚于 editor.css，同优先级靠后取胜） */
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item.flat-list-item.flat-list-item.flat-list-item.flat-list-item > .list-gutter > .indent-line:hover {
+  border-left-color: rgba(255, 0, 0, 0.3);
+  border-left-width: calc(var(--ilw, var(--indent-guide-width, 1px)) + 1px);
+}
+html[data-bt-mode] .editor-content .ProseMirror .flat-list-item:has(> .list-gutter > .indent-line:hover) > .flat-list-content > .flat-list-item > .list-gutter::before {
+  border-color: rgba(255, 0, 0, 0.3);
+  border-left-width: calc(var(--btw, 1px) + 1px);
+  border-bottom-width: calc(var(--btw, 1px) + 1px);
+}
+
+/* ---------- 显示模式：hover = 仅悬停/光标进入时显示（opacity 渐变） ----------
+ * 「聚焦」由 main.js 的 selectionchange 跟踪打上 .bt-focus 类实现：
+ * contenteditable 的 focus 只在 .ProseMirror 根上，:focus-within 匹配不到列表项。 */
+html[data-bt-mode="hover"] .editor-content .ProseMirror .flat-list-item > .list-gutter > .indent-line,
+html[data-bt-mode="hover"] .editor-content .ProseMirror .flat-list-item > .list-gutter::before {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+/* 悬停项 / 聚焦链项：自身轨道与弯头显示 */
+html[data-bt-mode="hover"] .editor-content .ProseMirror .flat-list-item:is(:hover, .bt-focus) > .list-gutter > .indent-line,
+html[data-bt-mode="hover"] .editor-content .ProseMirror .flat-list-item:is(:hover, .bt-focus) > .list-gutter::before {
+  opacity: 1;
+}
+/* 聚焦链项的直下子项（光标所在兄弟链）的弯头一并显示，构成完整分支 */
+html[data-bt-mode="hover"] .editor-content .ProseMirror .flat-list-item.bt-focus > .flat-list-content > .flat-list-item > .list-gutter::before {
+  opacity: 1;
+}
+
+/* ===== 设置面板（「设置 → 插件 → 已下载 → 设置」内渲染） ===== */
+.bt-settings-group {
+  margin-bottom: 16px;
+}
+
+.bt-settings-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 8px;
+}
+
+.bt-settings-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.bt-settings-radio:has(input:checked) {
+  border-color: var(--primary-color, #4a7dff);
+  background: var(--bg-secondary, rgba(0, 0, 0, 0.04));
+}
+
+.bt-settings-radio input {
+  margin-top: 3px;
+  accent-color: var(--primary-color, #4a7dff);
+}
+
+.bt-settings-radio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bt-settings-radio-name {
+  font-size: 13px;
+  color: var(--text-primary, #333);
+}
+
+.bt-settings-radio-desc {
+  font-size: 12px;
+  color: var(--text-secondary, #999);
+}
+
+.bt-settings-hint {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-secondary, #999);
+}

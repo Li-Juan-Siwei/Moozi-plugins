@@ -1,5 +1,39 @@
 [
   {
+    "id": "bullet-threading",
+    "name": "列表穿线",
+    "version": "1.0.0",
+    "description": "为编辑器嵌套列表绘制树状穿线：从父项标记向下延伸竖线并以圆角弯头连接到每个子项，支持全部四种列表类型，颜色粗细跟随缩进参考线设置。作为后台增强模块运行，安装启用后自动生效。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"><path d=\"M3.5 1.5v13\"/><path d=\"M3.5 4.5q0 2.5 2.5 2.5H9\"/><path d=\"M3.5 9q0 2.5 2.5 2.5H9\"/><circle cx=\"10.5\" cy=\"7\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10.5\" cy=\"11.5\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [],
+    "files": {
+      "main.js": "7ea0f18a72d1a243bdda77213a8ddcc6b4962f3e19b175a05281b9d856a4aa97",
+      "manifest.json": "ce4ae1aa5e69d360ae9dd721f539537adeb350a7e269c90ea1e8c1c7eacd2f03",
+      "style.css": "67d0844a0de2ef3e26b7ef3aeddbb548cda7cb6fb0ec8b44cb55d7affc5778d4"
+    }
+  },
+  {
+    "id": "desk-widget",
+    "name": "桌面挂件",
+    "version": "1.0.0",
+    "description": "在主面板右下角悬浮展示一张贴图陪伴你的笔记时光，可在设置中更换自定义图片。作为后台增强模块运行，安装启用后自动生效。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A6 6 0 0 1 5 6.708V2.277a2.8 2.8 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [],
+    "files": {
+      "main.js": "2e308c5f608e310baa3873739ed1a8e3bf909aedacd9818526b2a7a1eff7ab45",
+      "manifest.json": "9b107a13e30a4dc31a6e617e62c40c9f7630327836c24f816f828df8c6016d81",
+      "style.css": "f3cf27d466bf1250e9c8bc9783d01d097226a39625b5f7ec95ff52d225719eb4"
+    }
+  },
+  {
     "id": "drawing",
     "name": "绘制",
     "version": "1.0.1",
@@ -11,8 +45,27 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "index.js": "988283acb0b4f750fb3edadcb8f0972b4c72edbb83f7b7506896db3344382f0f",
-      "manifest.json": "dd0699e443b61bc04829bc2ddb8d7e47121fd0dc7df8340db8543903bb726642"
+      "index.js": "5a78a034eee121218ea8a0b7a383172c3ed2269b98d5ac5a120ffdc3ca742b71",
+      "manifest.json": "eca340c35489d5b2cfb52e477bda6cc4e277e1c0410bb8f46b9e2c2e6612e53f"
+    }
+  },
+  {
+    "id": "expression-trainer",
+    "name": "表达训练",
+    "version": "1.0.0",
+    "description": "表达训练模块，训练套路模板套用、词汇积累造句、一句话说重点三件事，AI 教练当场点评并给示范。安装后可在模块自定义显示中启用。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/><path d=\"M3.5 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5zm0 2.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [
+      "ai"
+    ],
+    "files": {
+      "main.js": "a761134be832fd47e1bb4d4baaed407209fcd4563d5026efb3665cbe4ec963b2",
+      "manifest.json": "54160a467ab3bf96ac84373b5ee316e0d7458a24738c5bcc5491b0879a1cae62",
+      "style.css": "bff6cdd1800e86c7559ecb18b82c62d131802547b2f590553927b27093efb2c2"
     }
   },
   {
@@ -27,9 +80,78 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "main.js": "7c12d2c5fb736c173280af310b4f84be42855391410fc80ba37eb6de9eca07bc",
-      "manifest.json": "b1288fc4f983d3536da57cb0008cd887eafe448c0154a153e1bd7fa4dcc09d0f",
-      "style.css": "44d537957c2102e32333868a682ddaa4c31a9182c685016a5a395fd29e491e01"
+      "main.js": "bdf6616c97e1c41bec8f35b4cce81ba3525d117c718d87271d71c2195d3bbc19",
+      "manifest.json": "968baed43dbbb72730ae84cd9b4d95d1beda5caf4cd7a53f1142ad915f6dbd2f",
+      "style.css": "df601e50bf8a2d2d75fc514903e65fa6d10810552dd459432bd037537b061780"
+    }
+  },
+  {
+    "id": "gomoku",
+    "name": "五子棋",
+    "version": "1.0.1",
+    "description": "经典五子棋游戏，支持双人本地对战：15×15 棋盘，黑白交替落子，五子连珠即为胜利。依赖「益智」模块，安装时自动附带。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z\"/></svg>",
+    "entry": "index.js",
+    "category": "game",
+    "dependencies": [
+      "puzzle"
+    ],
+    "permissions": [],
+    "files": {
+      "index.js": "73841b53a1277f460817f495651c88f7b9ba4663d6fd2a7283bb791461f2cb22",
+      "manifest.json": "c20e03dc2e8f07a01a30d87847e667449bf823cb09a8e56e1d4b414433de25d7"
+    }
+  },
+  {
+    "id": "heading-numbers",
+    "name": "标题序号",
+    "version": "1.0.0",
+    "description": "自动为编辑器标题生成序号，支持多级数字 / 中文层级 / 连续平铺三种风格，可在插件设置中自选。作为后台增强模块运行，安装启用后自动生效。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><rect x=\"1\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"3\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"7\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"8\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"12\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"13\" width=\"9\" height=\"1.6\" rx=\"0.8\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [],
+    "files": {
+      "main.js": "60f893154073a76586da73ca373da7dbc1afa68d6dc492f4ce0e177ce4bfcd8c",
+      "manifest.json": "ad6cb144d9e0cffa4d288f968588e06996da5796142e91360ef0f875701593d4",
+      "style.css": "5e840d704a86e76bfde464065f83c4502dbcd8e678ed73bb1387fc4b4540a15b"
+    }
+  },
+  {
+    "id": "hello-world",
+    "name": "Hello World",
+    "version": "1.0.0",
+    "description": "外部插件系统示例，演示第三方插件的开发方式。安装后可在模块自定义显示中启用。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"/><path d=\"M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [],
+    "files": {
+      "main.js": "88ddc464bb439db7924f1e5e30d039cb000978a0c7aa0cf394dd1e6ee4a578aa",
+      "manifest.json": "4a3479babda89d6561cb225faed1f6542d794f499a41ae347103d3ef3d9951cf",
+      "style.css": "39ea183ca13b4e5075498f3071986ba8f439ac8e3d238ae4567c16e1be4ef7b7"
+    }
+  },
+  {
+    "id": "list-view",
+    "name": "列表视图",
+    "version": "1.0.0",
+    "description": "把编辑器里的列表渲染为思维导图 / 看板 / 表格 / 时间线视图（纯视图切换，列表数据不变，随时还原），从块手柄菜单或 Ctrl+K 命令触发。作为后台增强模块运行，安装启用后自动生效。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M1 2.5A1.5 1.5 0 0 1 2.5 1h2A1.5 1.5 0 0 1 6 2.5v11A1.5 1.5 0 0 1 4.5 15h-2A1.5 1.5 0 0 1 1 13.5v-11zM2.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-2zM7 2.5A1.5 1.5 0 0 1 8.5 1h2A1.5 1.5 0 0 1 12 2.5v7A1.5 1.5 0 0 1 10.5 11h-2A1.5 1.5 0 0 1 7 9.5v-7zM8.5 2a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-2zM13 2.5A1.5 1.5 0 0 1 14.5 1h0A1.5 1.5 0 0 1 16 2.5v4a1.5 1.5 0 0 1-1.5 1.5h0A1.5 1.5 0 0 1 13 6.5v-4zM14.5 2a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h0a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h0z\"/></svg>",
+    "entry": "main.js",
+    "category": "module",
+    "dependencies": [],
+    "permissions": [],
+    "files": {
+      "main.js": "72f47564fc43ff7ca74eb81ec435060c34d23e618534810b0b22ae159200f7a5",
+      "manifest.json": "2d5f4c83834351f4b6abe9795ca777271e7a25eaa59ba5f2981c8721fd80051c",
+      "style.css": "f317034067d5453f3c0f58b4c9b6d3cfdcb38751aecacd0cc6264441e02c7162"
     }
   },
   {
@@ -44,8 +166,26 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "index.js": "39a5fa696b7377454b04bef3456d48171193d0bbc0001ebb2b01d69abf01581c",
-      "manifest.json": "8d6705a3a7911ac8db83bbb578ae33ebb04525ed03c4185da7721bc5535d7628"
+      "index.js": "a3dda2160869753f5f84130103752d0c74282858d8ad214512a9b29ad127ffc0",
+      "manifest.json": "2d197165e446ff715ac4d22b5841ce9a54bd2ca844999b14a7c61821f5eec88a"
+    }
+  },
+  {
+    "id": "minesweeper",
+    "name": "扫雷",
+    "version": "1.0.0",
+    "description": "经典扫雷游戏，在 9×9 格子中找出所有隐藏的地雷。依赖「益智」模块，安装时自动附带。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M8 0a1 1 0 0 0-1 1v5.268c0 .237.08.464.227.649l2.5 3.125a1 1 0 0 1 .273.691V15a1 1 0 1 0 2 0v-4.177a1 1 0 0 0-.273-.691l-2.5-3.125A1 1 0 0 1 8.5 6.268V1a1 1 0 0 0-1-1zM3 0a1 1 0 0 0-1 1v5.268c0 .237.08.464.227.649l2.5 3.125a1 1 0 0 1 .273.691V15a1 1 0 1 0 2 0v-4.177a1 1 0 0 0-.273-.691l-2.5-3.125A1 1 0 0 1 3.5 6.268V1a1 1 0 0 0-1-1z\"/></svg>",
+    "entry": "index.js",
+    "category": "game",
+    "dependencies": [
+      "puzzle"
+    ],
+    "permissions": [],
+    "files": {
+      "index.js": "2565084be6279cf553d56a9dcc90a7e96c562b4a37c8b0bb91e60f127461afa2",
+      "manifest.json": "459f5e1200f14a81f9e85e0144ea870047a6bb5b56f67e410714f82be39b637c"
     }
   },
   {
@@ -60,9 +200,9 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "main.js": "6ce5bc2214d87158ac3fcf6e620af7d1920dcc720c754b84382cf238a0d8fea7",
-      "manifest.json": "97df61593c6c88cb580f21c659a649d15ec327bc706dd16df315774834e27585",
-      "style.css": "0dc858eb1c0e88d79f32c9e044b35966dcf5985423b49bea788e9e58a90b12df"
+      "main.js": "c59fb8bbbfab6da424370cf3b20326a256cdb00abf50e61c87fb0a0a340b33b9",
+      "manifest.json": "1929398112e7c08fd2387dc32afe105a7d66ae8ba7ba62d5d768a91591b7e1f8",
+      "style.css": "a40a37f9c8bfff6cf3288097344ec3a36cdffe380c84c14758ebbd04173feba0"
     }
   },
   {
@@ -80,8 +220,8 @@
     ],
     "files": {
       "main.js": "07ba98cb105f37d2aacb9d1f864c5a689422ca39ca964f36cde030edda71af26",
-      "manifest.json": "5cda2abe9a0fd09e76065d3c0d45f2981fff4b18b3ebee23a6fd0b58fef987ad",
-      "style.css": "ff4fceb1c73577e91fd06c6e1be8774d6f54f528f1a8bb7aa3ac1f247e5374f1"
+      "manifest.json": "c0400df76e2bd4f88779063eb721914926b34a353fb71762e55bebb9cf878729",
+      "style.css": "0e14862e110e2392b7939f855926448b64c41672da483038a0a82d2e190df292"
     }
   },
   {
@@ -96,8 +236,8 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "index.js": "5efb141bbd34a629d3109cbdf6b3e4d0647a5452f2016eb7609838d88edebf95",
-      "manifest.json": "d9693a71da76bf960a8856e6357b1cc661401313e69761f36d78d0e950e2b218"
+      "index.js": "156ed4f823b35ece7f345748cc2732c39ef909fabecd1e2d6e4a7f6815d46a28",
+      "manifest.json": "f15a6e288dc4a688c3d7752f0e12963e59a11371252c145041a540c2fe353468"
     }
   },
   {
@@ -113,15 +253,15 @@
     "permissions": [],
     "files": {
       "main.js": "9096b24a8faba74febce2b441f17963dd29caf8e6ce01f795385e4119e8a022a",
-      "manifest.json": "e06926de6e2a9f8a64bd0eccdb2fdfec8ccb790f7e2c1f9da356efbc52ada599",
-      "style.css": "e57ab3f6f368564008c9e9a0d9344d42aaca7f4ffa43f770f5a637e7f0cf514b"
+      "manifest.json": "5ba4ecf15375cc639aaf70c556c1e3d2fc0d16337b0727a0a8c373e170756ce5",
+      "style.css": "61fbe58bd7bbf748b19166825573c06ab71424657f2311285d516cbc90c868ce"
     }
   },
   {
     "id": "puzzle",
     "name": "益智",
-    "version": "1.0.1",
-    "description": "益智游戏模块，内置五子棋、数独、扫雷、推箱子、数织、华容道、围棋、中国象棋、成语接龙、2048、24点等全部游戏，安装即可畅玩，无需单独安装。",
+    "version": "1.0.2",
+    "description": "益智游戏模块，内置五子棋、数独、扫雷、推箱子、数织、华容道、围棋、中国象棋、成语接龙、2048、24点等全部游戏，安装即可畅玩。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M6.5 0A1.5 1.5 0 0 0 5 1.5v3a.5.5 0 0 1-.5.5h-3A1.5 1.5 0 0 0 0 6.5v3A1.5 1.5 0 0 0 1.5 11h3a.5.5 0 0 1 .5.5v3A1.5 1.5 0 0 0 6.5 16h3a1.5 1.5 0 0 0 1.5-1.5v-3a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 0 16 9.5v-3A1.5 1.5 0 0 0 14.5 5h-3a.5.5 0 0 1-.5-.5v-3A1.5 1.5 0 0 0 9.5 0zm1.288 2.34a.25.25 0 0 1 .424 0l.799 1.278A.25.25 0 0 1 8.799 4H7.201a.25.25 0 0 1-.212-.382zm0 11.32-.799-1.277A.25.25 0 0 1 7.201 12H8.8a.25.25 0 0 1 .212.383l-.799 1.278a.25.25 0 0 1-.424 0Zm-4.17-4.65-1.279-.798a.25.25 0 0 1 0-.424l1.279-.799A.25.25 0 0 1 4 7.201V8.8a.25.25 0 0 1-.382.212Zm10.043-.798-1.278.799A.25.25 0 0 1 12 8.799V7.2a.25.25 0 0 1 .383-.212l1.278.799a.25.25 0 0 1 0 .424Z\"/></svg>",
     "entry": "index.js",
@@ -129,8 +269,26 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "index.js": "5d2b89b408642365cef316d64f3a6beb50691528d604fff95df9ca6e0f065486",
-      "manifest.json": "524e0ec3c7a4f1388853e009a66ff49372b57b36905081c62fa1405c551d2680"
+      "index.js": "ccaceb5ce814f8353f3503789966b4cfb4223e03672b21105c9c28f6ab9a9dfa",
+      "manifest.json": "f53cbc9443596b10cd02836f903f82b6aee866f239a124e02e4b12eb22d0946d"
+    }
+  },
+  {
+    "id": "sudoku",
+    "name": "数独",
+    "version": "1.0.0",
+    "description": "经典数独游戏，9×9 格子，考验逻辑推理能力。依赖「益智」模块，安装时自动附带。",
+    "author": "Moozi Team",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-13zM2 2.5v5h5v-5H2zm6 0v5h5v-5H8zm-6 6v5h5v-5H2zm6 0v5h5v-5H8z\"/></svg>",
+    "entry": "index.js",
+    "category": "game",
+    "dependencies": [
+      "puzzle"
+    ],
+    "permissions": [],
+    "files": {
+      "index.js": "b6256aa2c911439d937a96fe627d3c1ab2a1e89637f4b89d204057b3ccc9ca23",
+      "manifest.json": "991ed974489a2b59a06f5c18807be972787f98859cf76f026951c6353c552fcd"
     }
   }
 ]

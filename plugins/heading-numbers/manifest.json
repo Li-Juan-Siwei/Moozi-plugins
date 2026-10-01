@@ -1,0 +1,11 @@
+{
+  "name": "标题序号",
+  "version": "1.0.0",
+  "description": "自动为编辑器标题生成序号，支持多级数字 / 中文层级 / 连续平铺三种风格，可在插件设置中自选。作为后台增强模块运行，安装启用后自动生效。",
+  "author": "Moozi Team",
+  "category": "module",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><rect x=\"1\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"3\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"7\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"8\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"12\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"13\" width=\"9\" height=\"1.6\" rx=\"0.8\"/></svg>",
+  "entry": "main.js",
+  "location": "background",
+  "permissions": []
+}

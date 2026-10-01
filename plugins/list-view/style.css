@@ -1,0 +1,243 @@
+/*
+ * 列表视图插件样式
+ *
+ * 作用域：全部选择器以 html[data-list-view-plugin] 开头（插件加载时由 main.js 设置），
+ * 既保证优先级压过编辑器基础样式，也是总开关——属性移除即全部失效。
+ * class 由 main.js 的 observer 维护：run 首项 lv-root、全部成员 lv-item lv-<view>。
+ * 纯布局，无浮层、不使用 z-index；颜色全部走 var(--*) 主题变量，自动适配深浅色。
+ */
+
+/* ===== 公共 ===== */
+
+/* 成员间距统一微调（各视图可再覆盖） */
+html[data-list-view-plugin] .flat-list-item.lv-item {
+  transition: background-color 0.2s ease;
+}
+
+/* ===== 看板（kanban）：run 成员 = 列，直接子项 = 卡片 ===== */
+
+html[data-list-view-plugin] .flat-list-item.lv-kanban {
+  display: inline-flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 100%;
+  vertical-align: top;
+  margin: 4px 12px 12px 0;
+  padding: 10px 8px 4px;
+  background: var(--bg-secondary, rgba(0, 0, 0, 0.04));
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 10px;
+}
+
+/* 列自身标记隐藏（列标题不需要列表符号） */
+html[data-list-view-plugin] .flat-list-item.lv-kanban > .list-gutter {
+  display: none;
+}
+
+html[data-list-view-plugin] .flat-list-item.lv-kanban > .flat-list-content {
+  width: 100%;
+  flex: unset;
+}
+
+/* 列标题 = 成员主块 */
+html[data-list-view-plugin] .flat-list-item.lv-kanban > .flat-list-content > :first-child {
+  font-weight: 600;
+  padding: 2px 6px 8px;
+}
+
+/* 卡片 = 列的直接子项（保留 flex 布局：任务复选框仍可点击） */
+html[data-list-view-plugin] .flat-list-item.lv-kanban > .flat-list-content > .flat-list-item {
+  margin: 0 0 8px;
+  padding: 6px 8px;
+  background: var(--menu-bg, #fff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* 卡片区不画缩进参考线 */
+html[data-list-view-plugin] .flat-list-item.lv-kanban .flat-list-item .indent-line {
+  display: none;
+}
+
+/* ===== 表格（table）：run 成员 = 行，主块 = 首列，直接子项 = 后续列 ===== */
+
+html[data-list-view-plugin] .flat-list-item.lv-table {
+  display: table-row;
+}
+
+html[data-list-view-plugin] .flat-list-item.lv-table > .list-gutter {
+  display: none;
+}
+
+/* content 透明化，让主块与子项直接成为行内单元格（连续 table-row 兄弟
+   会自动生成匿名 table 盒，run 边界即表格边界） */
+html[data-list-view-plugin] .flat-list-item.lv-table > .flat-list-content {
+  display: contents;
+}
+
+html[data-list-view-plugin] .flat-list-item.lv-table > .flat-list-content > :first-child,
+html[data-list-view-plugin] .flat-list-item.lv-table > .flat-list-content > .flat-list-item {
+  display: table-cell;
+  border: 1px solid var(--border-color, #e0e0e0);
+  padding: 6px 10px;
+  vertical-align: top;
+}
+
+/* 单元格内的子项：隐藏标记、去掉缩进 */
+html[data-list-view-plugin]
+  .flat-list-item.lv-table
+  > .flat-list-content
+  > .flat-list-item
+  > .list-gutter {
+  display: none;
+}
+html[data-list-view-plugin] .flat-list-item.lv-table > .flat-list-content > .flat-list-item {
+  margin-left: 0;
+}
+
+/* 首行（锚点所在行）作表头 */
+html[data-list-view-plugin] .flat-list-item.lv-table.lv-root > .flat-list-content > :first-child,
+html[data-list-view-plugin]
+  .flat-list-item.lv-table.lv-root
+  > .flat-list-content
+  > .flat-list-item {
+  font-weight: 600;
+  background: var(--bg-secondary, rgba(0, 0, 0, 0.04));
+}
+
+/* ===== 时间线（timeline）：左轨竖线 + 节点圆点，子级照常缩进 ===== */
+
+html[data-list-view-plugin] .flat-list-item.lv-timeline {
+  position: relative;
+}
+
+/* 竖轨：对齐 gutter（24px）中线 */
+html[data-list-view-plugin] .flat-list-item.lv-timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color, #e0e0e0);
+}
+
+/* 节点圆点：统一自绘（隐藏原 marker，任务项保留复选框不画点） */
+html[data-list-view-plugin] .flat-list-item.lv-timeline > .list-gutter > .list-marker {
+  visibility: hidden;
+}
+html[data-list-view-plugin] .flat-list-item.lv-timeline > .list-gutter::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--menu-bg, #fff);
+  border: 3px solid var(--primary-color, #4a7dff);
+  box-sizing: border-box;
+}
+html[data-list-view-plugin] .flat-list-item.lv-timeline.task-item > .list-gutter::after {
+  display: none;
+}
+
+/* 首项标题强调 */
+html[data-list-view-plugin] .flat-list-item.lv-timeline.lv-root > .flat-list-content > :first-child {
+  font-weight: 600;
+}
+
+/* ===== 思维导图（mindmap）：横排树，主块 = 气泡节点，子项纵排在右 ===== */
+
+/* 成员自身及所有后代项的标记全部隐藏 */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap > .list-gutter,
+html[data-list-view-plugin] .flat-list-item.lv-mindmap .flat-list-item > .list-gutter {
+  display: none;
+}
+
+/* content 变 grid：左列气泡、右列子项纵排 */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap > .flat-list-content,
+html[data-list-view-plugin] .flat-list-item.lv-mindmap .flat-list-item > .flat-list-content {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+
+/* 主块（气泡）固定左列首行 */
+html[data-list-view-plugin]
+  .flat-list-item.lv-mindmap
+  .flat-list-content
+  > :first-child:is(p, h1, h2, h3, h4, h5, h6) {
+  grid-column: 1;
+  grid-row: 1;
+  display: inline-block;
+  width: fit-content;
+  max-width: 320px;
+  margin: 1px 0;
+  padding: 3px 10px;
+  background: var(--menu-bg, #fff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 子项固定右列，逐个纵排 */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap .flat-list-content > .flat-list-item {
+  grid-column: 2;
+  margin: 1px 0;
+  position: relative;
+}
+
+/* 连接线：每个子项左侧横线 + 兄弟间竖轨（18px 列间隙的中线处） */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap .flat-list-content > .flat-list-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 14px;
+  width: 10px;
+  height: 1px;
+  background: var(--border-color, #ccc);
+}
+html[data-list-view-plugin] .flat-list-item.lv-mindmap .flat-list-content > .flat-list-item::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-color, #ccc);
+}
+/* 首个/末尾子项的竖轨只画半段，形成树形肘线（子项都是 div，p 主块不占 of-type） */
+html[data-list-view-plugin]
+  .flat-list-item.lv-mindmap
+  .flat-list-content
+  > .flat-list-item:first-of-type::after {
+  top: 14px;
+}
+html[data-list-view-plugin]
+  .flat-list-item.lv-mindmap
+  .flat-list-content
+  > .flat-list-item:last-of-type::after {
+  bottom: calc(100% - 15px);
+}
+
+/* 成员级（顶层）气泡强调；锚点成员再加主题色 */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap > .flat-list-content > :first-child {
+  font-weight: 600;
+}
+html[data-list-view-plugin]
+  .flat-list-item.lv-mindmap.lv-root
+  > .flat-list-content
+  > :first-child:is(p, h1, h2, h3, h4, h5, h6) {
+  background: var(--primary-color, #4a7dff);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* 成员树之间留空 */
+html[data-list-view-plugin] .flat-list-item.lv-mindmap {
+  margin-bottom: 12px;
+}
