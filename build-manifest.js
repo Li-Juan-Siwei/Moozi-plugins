@@ -14,8 +14,16 @@ const crypto = require('crypto')
 const pluginsDir = path.join(__dirname, 'plugins')
 const outputPath = path.join(__dirname, 'plugins.json')
 
+// 文本文件按 LF 归一化后再算哈希：git（.gitattributes eol=lf）提交时会把 CRLF
+// 转成 LF，CDN 发的是 LF 内容，哈希必须与提交后的字节一致，否则应用端校验失败
+const TEXT_EXT = new Set(['.js', '.mjs', '.cjs', '.json', '.css', '.html', '.md', '.svg', '.txt', '.vue'])
+
 function sha256(filePath) {
-    return crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex')
+    let buf = fs.readFileSync(filePath)
+    if (TEXT_EXT.has(path.extname(filePath).toLowerCase())) {
+        buf = Buffer.from(buf.toString('utf8').replace(/\r\n/g, '\n'), 'utf8')
+    }
+    return crypto.createHash('sha256').update(buf).digest('hex')
 }
 
 const list = []
