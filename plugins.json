@@ -46,7 +46,7 @@
     "permissions": [],
     "files": {
       "index.js": "988283acb0b4f750fb3edadcb8f0972b4c72edbb83f7b7506896db3344382f0f",
-      "manifest.json": "eca340c35489d5b2cfb52e477bda6cc4e277e1c0410bb8f46b9e2c2e6612e53f"
+      "manifest.json": "dd0699e443b61bc04829bc2ddb8d7e47121fd0dc7df8340db8543903bb726642"
     }
   },
   {
@@ -81,7 +81,7 @@
     "permissions": [],
     "files": {
       "main.js": "7c12d2c5fb736c173280af310b4f84be42855391410fc80ba37eb6de9eca07bc",
-      "manifest.json": "968baed43dbbb72730ae84cd9b4d95d1beda5caf4cd7a53f1142ad915f6dbd2f",
+      "manifest.json": "b1288fc4f983d3536da57cb0008cd887eafe448c0154a153e1bd7fa4dcc09d0f",
       "style.css": "44d537957c2102e32333868a682ddaa4c31a9182c685016a5a395fd29e491e01"
     }
   },
@@ -167,7 +167,7 @@
     "permissions": [],
     "files": {
       "index.js": "39a5fa696b7377454b04bef3456d48171193d0bbc0001ebb2b01d69abf01581c",
-      "manifest.json": "2d197165e446ff715ac4d22b5841ce9a54bd2ca844999b14a7c61821f5eec88a"
+      "manifest.json": "8d6705a3a7911ac8db83bbb578ae33ebb04525ed03c4185da7721bc5535d7628"
     }
   },
   {
@@ -200,8 +200,8 @@
     "dependencies": [],
     "permissions": [],
     "files": {
-      "main.js": "c59fb8bbbfab6da424370cf3b20326a256cdb00abf50e61c87fb0a0a340b33b9",
-      "manifest.json": "1929398112e7c08fd2387dc32afe105a7d66ae8ba7ba62d5d768a91591b7e1f8",
+      "main.js": "6ce5bc2214d87158ac3fcf6e620af7d1920dcc720c754b84382cf238a0d8fea7",
+      "manifest.json": "97df61593c6c88cb580f21c659a649d15ec327bc706dd16df315774834e27585",
       "style.css": "0dc858eb1c0e88d79f32c9e044b35966dcf5985423b49bea788e9e58a90b12df"
     }
   },
@@ -220,7 +220,7 @@
     ],
     "files": {
       "main.js": "07ba98cb105f37d2aacb9d1f864c5a689422ca39ca964f36cde030edda71af26",
-      "manifest.json": "c0400df76e2bd4f88779063eb721914926b34a353fb71762e55bebb9cf878729",
+      "manifest.json": "5cda2abe9a0fd09e76065d3c0d45f2981fff4b18b3ebee23a6fd0b58fef987ad",
       "style.css": "ff4fceb1c73577e91fd06c6e1be8774d6f54f528f1a8bb7aa3ac1f247e5374f1"
     }
   },
@@ -237,7 +237,7 @@
     "permissions": [],
     "files": {
       "index.js": "5efb141bbd34a629d3109cbdf6b3e4d0647a5452f2016eb7609838d88edebf95",
-      "manifest.json": "f15a6e288dc4a688c3d7752f0e12963e59a11371252c145041a540c2fe353468"
+      "manifest.json": "d9693a71da76bf960a8856e6357b1cc661401313e69761f36d78d0e950e2b218"
     }
   },
   {
@@ -253,7 +253,7 @@
     "permissions": [],
     "files": {
       "main.js": "9096b24a8faba74febce2b441f17963dd29caf8e6ce01f795385e4119e8a022a",
-      "manifest.json": "5ba4ecf15375cc639aaf70c556c1e3d2fc0d16337b0727a0a8c373e170756ce5",
+      "manifest.json": "e06926de6e2a9f8a64bd0eccdb2fdfec8ccb790f7e2c1f9da356efbc52ada599",
       "style.css": "e57ab3f6f368564008c9e9a0d9344d42aaca7f4ffa43f770f5a637e7f0cf514b"
     }
   },
