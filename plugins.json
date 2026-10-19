@@ -51,8 +51,8 @@
   },
   {
     "id": "expression-trainer",
-    "name": "表达训练",
-    "version": "1.1.0",
+    "name": "表达",
+    "version": "1.1.1",
     "description": "表达训练模块，训练套路模板套用、词汇积累造句、一句话说重点三件事，另附语言润色工具，AI 教练当场点评并给示范。安装后可在模块自定义显示中启用。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z\"/><path d=\"M3.5 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5zm0 2.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z\"/></svg>",
@@ -63,9 +63,9 @@
       "ai"
     ],
     "files": {
-      "main.js": "d4a26dbe3172979b8663591123819fd23aaeab31a858f53e9cf82926914b7d86",
-      "manifest.json": "a2dd9f96a5769b9be35ed28db1aac1ab58711338f9ea321368e32748be822faa",
-      "style.css": "114b3f26657941bb59c08e62b73f339bb775cc92e65e08b3c299f8496e6a6df8"
+      "main.js": "aaea7b8bc7be3781bf11203e47a2f9189b40ba817275fe1f2c689025cf5dc3ef",
+      "manifest.json": "a098a40feb2d34bfa64980a1c19dff97c83ff4d94cc2deb5bdf58f4f9792b23f",
+      "style.css": "1f378d65871d89152e78c73be7fc273a3ccb2bd21400025890b1971f631c8ee8"
     }
   },
   {

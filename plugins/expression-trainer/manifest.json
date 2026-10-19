@@ -1,6 +1,6 @@
 {
-  "name": "表达训练",
-  "version": "1.1.0",
+  "name": "表达",
+  "version": "1.1.1",
   "description": "表达训练模块，训练套路模板套用、词汇积累造句、一句话说重点三件事，另附语言润色工具，AI 教练当场点评并给示范。安装后可在模块自定义显示中启用。",
   "author": "Moozi Team",
   "category": "module",
