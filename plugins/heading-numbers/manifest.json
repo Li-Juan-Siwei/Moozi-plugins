@@ -1,6 +1,6 @@
 {
   "name": "标题序号",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "自动为编辑器标题生成序号，支持多级数字 / 中文层级 / 连续平铺三种风格，可在插件设置中自选。作为后台增强模块运行，安装启用后自动生效。",
   "author": "Moozi Team",
   "category": "module",

@@ -106,7 +106,7 @@
   {
     "id": "heading-numbers",
     "name": "标题序号",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "自动为编辑器标题生成序号，支持多级数字 / 中文层级 / 连续平铺三种风格，可在插件设置中自选。作为后台增强模块运行，安装启用后自动生效。",
     "author": "Moozi Team",
     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><rect x=\"1\" y=\"2\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"3\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"7\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"8\" width=\"9\" height=\"1.6\" rx=\"0.8\"/><rect x=\"1\" y=\"12\" width=\"3\" height=\"3\" rx=\"0.6\"/><rect x=\"6\" y=\"13\" width=\"9\" height=\"1.6\" rx=\"0.8\"/></svg>",
@@ -116,8 +116,8 @@
     "permissions": [],
     "files": {
       "main.js": "cad804300d394945c970b949b1aace7ea55d72a313cb3d38a89979a66a77dc00",
-      "manifest.json": "ad6cb144d9e0cffa4d288f968588e06996da5796142e91360ef0f875701593d4",
-      "style.css": "d538bc8caa122ded5c96fa770fdc06e2089dd693385e94585aaededeeeb6175f"
+      "manifest.json": "69e617e52a7577381330bf429baebcbd11639eb8b7eda126cdccde89ff895c88",
+      "style.css": "b43c641f6e10ba0b704ca1fe4536f7f4e1c60e32e5996370a43ba4fb6e737ced"
     }
   },
   {

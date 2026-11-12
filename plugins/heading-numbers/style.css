@@ -11,12 +11,17 @@
   counter-reset: hn1 hn2 hn3 hn4 hn5 hn6;
 }
 
-/* 层级递增与下级重置（三种风格共用；起始层级之前的层级由下方规则关闭） */
-.editor-content .ProseMirror h1 { counter-increment: hn1; counter-reset: hn2 hn3 hn4 hn5 hn6; }
-.editor-content .ProseMirror h2 { counter-increment: hn2; counter-reset: hn3 hn4 hn5 hn6; }
-.editor-content .ProseMirror h3 { counter-increment: hn3; counter-reset: hn4 hn5 hn6; }
-.editor-content .ProseMirror h4 { counter-increment: hn4; counter-reset: hn5 hn6; }
-.editor-content .ProseMirror h5 { counter-increment: hn5; counter-reset: hn6; }
+/* 层级递增与下级归零（三种风格共用；起始层级之前的层级由下方规则关闭）
+ * 下级必须用 counter-set，不能用 counter-reset：
+ * 标题在 DOM 里是扁平的兄弟节点，而 counter-reset 新建的是「该元素及其子树内」的计数器，
+ * 后面的兄弟标题读不到它，于是下级序号永不归零——「2. 主角职业」下的子标题会接着上一条
+ * 的 1.3 往下数成 2.4、2.5（2026-11 反馈的实际缺陷）。counter-set 改的是外层计数器的当前值，
+ * 后续兄弟标题能读到归零后的结果，才会从 2.1 重新开始。 */
+.editor-content .ProseMirror h1 { counter-increment: hn1; counter-set: hn2 0 hn3 0 hn4 0 hn5 0 hn6 0; }
+.editor-content .ProseMirror h2 { counter-increment: hn2; counter-set: hn3 0 hn4 0 hn5 0 hn6 0; }
+.editor-content .ProseMirror h3 { counter-increment: hn3; counter-set: hn4 0 hn5 0 hn6 0; }
+.editor-content .ProseMirror h4 { counter-increment: hn4; counter-set: hn5 0 hn6 0; }
+.editor-content .ProseMirror h5 { counter-increment: hn5; counter-set: hn6 0; }
 .editor-content .ProseMirror h6 { counter-increment: hn6; }
 
 /* 连续平铺风格的独立计数器 */
@@ -71,18 +76,19 @@ html[data-hn-style="chinese"][data-hn-start="4"] .editor-content .ProseMirror h5
 html[data-hn-style="chinese"][data-hn-start="4"] .editor-content .ProseMirror h6::before { content: counter(hn6) ". "; }
 html[data-hn-style="flat"][data-hn-start="4"] .editor-content .ProseMirror :is(h4, h5, h6)::before { content: counter(hn-flat) ". "; }
 
-/* 起始层级之前的标题：不编号、不递增、不重置下级（所有风格共用） */
-html[data-hn-start="2"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+/* 起始层级之前的标题：不编号、不递增、不归零下级（所有风格共用）
+ * counter-set 也要一起关掉，否则文档标题（一级标题）会把章计数器清零，编号从 0 开始 */
+html[data-hn-start="2"] .editor-content .ProseMirror h1 { counter-increment: none; counter-set: none; }
 html[data-hn-start="2"] .editor-content .ProseMirror h1::before { content: none; }
-html[data-hn-start="3"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h1 { counter-increment: none; counter-set: none; }
 html[data-hn-start="3"] .editor-content .ProseMirror h1::before { content: none; }
-html[data-hn-start="3"] .editor-content .ProseMirror h2 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="3"] .editor-content .ProseMirror h2 { counter-increment: none; counter-set: none; }
 html[data-hn-start="3"] .editor-content .ProseMirror h2::before { content: none; }
-html[data-hn-start="4"] .editor-content .ProseMirror h1 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h1 { counter-increment: none; counter-set: none; }
 html[data-hn-start="4"] .editor-content .ProseMirror h1::before { content: none; }
-html[data-hn-start="4"] .editor-content .ProseMirror h2 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h2 { counter-increment: none; counter-set: none; }
 html[data-hn-start="4"] .editor-content .ProseMirror h2::before { content: none; }
-html[data-hn-start="4"] .editor-content .ProseMirror h3 { counter-increment: none; counter-reset: none; }
+html[data-hn-start="4"] .editor-content .ProseMirror h3 { counter-increment: none; counter-set: none; }
 html[data-hn-start="4"] .editor-content .ProseMirror h3::before { content: none; }
 
 /* ---- 首个一级标题不编号（仍占用序号，后续标题编号不受影响） ----
